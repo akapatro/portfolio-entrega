@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Monument light';
+    src: url(./assets/font/PPMonumentExtended-Light.otf);
+}
+
+@font-face {
+    font-family: 'Monument regular';
+    src: url(./assets/font/PPMonumentExtended-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Monument black';
+    src: url(./assets/font/PPMonumentExtended-Black.otf);
+}
+
+:root{
+    --text-color:white;
+    --primary-color:black;
+    --secondary-color:white;
+    --link-color:white;
+    --tittle-font:'Monument black';
+    --bold-font:'Monument regular';
+    --light-font:'Monument light';
+}
+
+@media (min-width:250px) and (max-width:499px){
+    body{
+        background-color: var(--primary-color);
+        height: 100vh;
+    }
+    
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    div{
+        padding-top: 15rem;
+        cursor: default;
+        animation-name: coming-soon;
+        position: relative;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+        animation-direction: alternate;
+    }
+    
+    h1{
+        color: var(--text-color);
+        font-family: var(--tittle-font);
+        margin-top: 2rem;
+        font-size: 1rem;
+    }
+    
+    div:hover{
+        transform: translateY(-5%);
+    } 
+
+
+    @keyframes coming-soon{
+        0%{transform: translateY(0);}
+        100%{transform: translateY(10%);}
+    
+    }
+}
+
+/* ----------------------------------------- */
+
+
+body{
+    background-color: var(--primary-color);
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div{
+    margin: 15%;
+    cursor: default;
+    animation-name: coming-soon;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+h1{
+    color: var(--text-color);
+    font-family: var(--tittle-font);
+    margin-top: 2rem;
+}
+
+
+@keyframes coming-soon{
+    0%{transform: translateY(0);}
+    100%{transform: translateY(10%);}
+
+}

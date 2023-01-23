@@ -1,0 +1,1175 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Monument light';
+    src: url(./assets/font/PPMonumentExtended-Light.otf);
+}
+
+@font-face {
+    font-family: 'Monument regular';
+    src: url(./assets/font/PPMonumentExtended-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Monument black';
+    src: url(./assets/font/PPMonumentExtended-Black.otf);
+}
+
+:root{
+    --text-color:white;
+    --primary-color:black;
+    --secondary-color:white;
+    --link-color:white;
+    --tittle-font:'Monument black';
+    --bold-font:'Monument regular';
+    --light-font:'Monument light';
+}
+
+.background{
+    height: 100vh;
+    background-image: url(./assets/123.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* ************ Media queries * ************/  /* ************ Celulares * ************/
+
+@media (min-width:250px) and (max-width:499px) {
+
+    .background{
+        height: 100vh;
+        background-image: url(./assets/123.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+    }
+    
+    .portfolio-tittle{
+        color: var(--secondary-color);
+        font-family: var(--tittle-font);
+        text-decoration: underline;
+        font-size: 1.2rem;
+        position: absolute;
+        top: 25%;
+
+    }
+
+    .year-cv_button{
+        font-family: var(--light-font);
+        color: var(--text-color);
+        font-size: .6rem;
+
+        position: absolute;
+        top: 33%;
+    }
+
+    .year{
+        margin-right: 5rem;
+        font-family: var(--bold-font);
+    }
+
+    .cv-button{
+
+        cursor: pointer;
+        border: 1px solid var(--secondary-color);
+        padding: 0.2rem 0.4rem;
+        border-radius: 1rem;
+        background-color: transparent;
+        text-decoration: none;
+        
+        font-family: var(--light-font);
+        font-size: .7rem;
+        color: var(--link-color);
+
+    }
+
+    .name-job{
+        display: flex;
+        color: var(--text-color);
+        font-size: .7rem;
+        font-family: var(--light-font);
+        position: absolute;
+        top: 85%;
+    }
+
+    .name-job span{
+        margin-right: 2rem;
+    }
+
+    .name-job h2{
+        font-size: .7rem;
+    }
+
+    .social-media{
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 ;
+        position: absolute;
+        top: 90%;
+    }
+
+    .social-media ul li{
+        text-align: center;
+        display: inline-block;
+        padding: 0 .8rem;
+        color: var(--secondary-color);
+    }
+
+    .number-container{
+        font-family:var(--tittle-font);
+        color: var(--text-color);
+        font-size: .7rem;
+        position: absolute;
+        top: 95%;
+    }
+
+
+
+    /* ---------- about me section  ---------- */
+
+    main{
+        background-color: var(--primary-color);
+    }
+
+    .about-me{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primary-color);
+        color: var(--text-color);
+    }
+
+    .aboutme-tittle{
+        font-size: 3rem;
+        font-family: var(--light-font);
+        margin-top: 3rem;
+        width: 80%;
+    }
+
+    .aboutme-subtittle{
+        font-size: 1.1rem;
+        font-family: var(--tittle-font);
+        width: 80%;
+
+    }
+
+    .about-me_text{
+        width: 80%;
+        margin-top: 3rem;
+    }
+
+    .about-me_text p{
+        font-family: var(--light-font);
+        line-height: 1.6;
+    }
+
+    .skills{
+        justify-content: center;
+        width: 80%;
+        font-family: var(--light-font);
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .skills-text{
+        display: flex;  
+    }
+
+    .languages-text ul{
+       list-style: none;
+       margin-top: 1rem;
+    }
+
+    .languages-text ul li{
+        line-height: 2.5rem;
+    }
+
+    .experience-text ul{
+        list-style: none;
+        margin-top: 1rem;
+    }
+
+    .experience-text ul li{
+        line-height: 2.5rem;
+    }
+
+    .progammingLanguages-icons{
+        margin-top: 3rem;
+        font-family: var(--bold-font);
+        
+    }
+    .progammingLanguages-icons span{
+        text-decoration: underline;
+    }
+
+    .progammingLanguages-icons ul{
+        margin-top: 1rem;
+    }
+
+    .progammingLanguages-icons ul li{
+        display: inline-block;
+        text-align: center;
+        padding: 0 .8rem;
+        color: var(--secondary-color);
+    }
+
+    .progammingLanguages-icons ul li img{
+        width: 1.5rem;
+        height: 1.5rem;
+        
+    }
+
+    .graphicDesign-icons{
+        margin-top: 3rem;
+        font-family: var(--bold-font);
+        
+    }
+    .graphicDesign-icons span{
+        text-decoration: underline;
+    }
+
+    .graphicDesign-icons ul{
+        margin-top: 1rem;
+    }
+
+    .graphicDesign-icons ul li{
+        display: inline-block;
+        text-align: center;
+        padding: 0 .8rem;
+        color: var(--secondary-color);
+    }
+
+    .graphicDesign-icons ul li img{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .text-pc{
+        font-family: var(--light-font);
+        color: var(--text-color);
+        line-height: 1.5rem;
+        margin-top: 3rem;
+        padding-left: 5rem;
+        padding-bottom: 5rem;
+        padding-right: 5rem;
+    }   
+
+        /* ---------- banner section  ---------- */
+
+        .banner-container{
+            background-image: url(./assets/123.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+            display: inline-block;
+            width: 100%;
+    
+            font-size: 1rem;
+            font-family: var(--tittle-font);
+            color: var(--secondary-color);
+            padding: 4rem;
+            text-align: center;
+            
+        }
+    
+        .banner h3{
+            margin-bottom: 2rem;
+        }
+        
+        .banner a{
+            font-family: var(--bold-font);
+            font-size: 1rem;
+            text-decoration: none;
+            color: var(--text-color);
+            cursor: pointer;
+            background-color: transparent;
+            border: 2px solid var(--secondary-color);
+            border-radius: 1rem;
+            padding: 1rem 1rem;
+            margin-top: 1rem;
+        }
+    
+        /* ---------- my works section  ---------- */
+    
+         .mywork-tittle{
+            text-align: center;
+            font-family: var(--tittle-font);
+            color: var(--text-color);
+            background-color: black;
+            font-size: 2rem;
+            padding: 5rem 0rem;
+        }
+        
+        .works-container{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: black;
+            padding-bottom: 4rem;
+        }
+    
+        .works{
+            width: 75%;
+            margin: 2rem;
+            overflow: hidden;
+            background: var(--primary-color);
+            cursor: default;
+            transition: all 400ms ease;
+            border: 3px solid var(--secondary-color);
+            border-radius: 3rem;
+        }
+    
+        .works:hover{
+            transform: translateY(-3%);
+        }
+        
+        .works-div{
+            text-align: center;
+        }
+    
+        .works img{
+            width: 30%;
+            padding: 4rem 0rem;
+        }
+    
+        .works .content{
+            padding: 1rem;
+            text-align: center;
+        }
+    
+        .works .content p{
+            line-height: 1.6rem;
+            color: var(--text-color);
+            font-family: var(--light-font);
+        }
+    
+        .works .content h3{
+            font-family: var(--bold-font);
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+    
+        .works .content a{
+            font-family: var(--bold-font);
+            font-size: .7rem;
+            text-decoration: none;
+            display: inline-block;
+            padding: 1rem 1.8rem;
+            margin: 3rem;
+            cursor: pointer;
+            color: var(--secondary-color);
+            border: 1px solid var(--secondary-color);
+            border-radius: 3rem;
+        }
+    
+        /* ---------- my works section  ---------- */
+    
+    
+        footer{
+            padding-top: 4rem;
+            text-align: center;
+            background-image: url(./assets/123.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: var(--tittle-font);
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+        .social-media-footer{
+           padding-top: 3rem;
+           padding-bottom: .9rem;
+            display: flex;
+            margin: 0 ;
+            text-decoration: none;
+            justify-content: center;
+        }
+    
+        .social-media-footer ul li{
+            text-align: center;
+            
+            display: inline-block;
+            padding: 0 .8rem;
+            color: var(--secondary-color);
+            
+        }
+    
+        .number-container-footer{
+            font-size: .7rem;
+            padding-bottom: 1rem;
+        }
+ 
+
+}
+
+/* ************ Tablets * ************/
+
+@media (min-width:500px) and (max-width: 859px) {
+
+    .background{
+        height: 100vh;
+        background-image: url(./assets/123.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+    }
+    
+    .portfolio-tittle{
+        color: var(--secondary-color);
+        font-family: var(--tittle-font);
+        text-decoration: underline;
+        font-size: 1.7rem;
+        position: absolute;
+        top: 25%;
+
+    }
+
+    .year-cv_button{
+        font-family: var(--light-font);
+        color: var(--text-color);
+        font-size: .8rem;
+
+        position: absolute;
+        top: 33%;
+    }
+
+    .year{
+        margin-right: 11rem;
+        font-family: var(--bold-font);
+    }
+
+    .cv-button{
+
+        cursor: pointer;
+        border: 1px solid var(--secondary-color);
+        padding: 0.2rem 0.4rem;
+        border-radius: 1rem;
+        background-color: transparent;
+        text-decoration: none;
+        
+        font-family: var(--light-font);
+        font-size: .8rem;
+        color: var(--link-color);
+
+    }
+
+    .name-job{
+        display: flex;
+        color: var(--text-color);
+        font-size: .7rem;
+        font-family: var(--light-font);
+        position: absolute;
+        top: 85%;
+    }
+
+    .name-job span{
+        margin-right: 2rem;
+    }
+
+    .name-job h2{
+        font-size: .7rem;
+    }
+
+    .social-media{
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 ;
+        position: absolute;
+        top: 90%;
+    }
+
+    .social-media ul li{
+        text-align: center;
+        display: inline-block;
+        padding: 0 .8rem;
+        color: var(--secondary-color);
+    }
+
+    .number-container{
+        font-family:var(--tittle-font);
+        color: var(--text-color);
+        font-size: .7rem;
+        position: absolute;
+        top: 95%;
+    }
+
+  
+
+    /* ---------- about me section  ---------- */
+    main{
+        background-color: var(--primary-color);
+    }
+
+    .about-me{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primary-color);
+        color: var(--text-color);
+    }
+
+    .aboutme-tittle{
+        font-size: 3rem;
+        font-family: var(--light-font);
+        margin-top: 3rem;
+        width: 80%;
+    }
+
+    .aboutme-subtittle{
+        font-size: 1.1rem;
+        font-family: var(--tittle-font);
+        width: 80%;
+
+    }
+
+    .about-me_text{
+        width: 80%;
+        margin-top: 3rem;
+    }
+
+    .about-me_text p{
+        font-family: var(--light-font);
+        line-height: 1.6;
+    }
+
+    .skills{
+        justify-content: center;
+        width: 80%;
+        font-family: var(--light-font);
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .skills-text{
+        display: flex;  
+    }
+
+    .languages-text ul{
+        list-style: none;
+        margin-top: 1rem;
+     }
+     .languages-text ul li{
+        line-height: 2.5rem;
+    }
+ 
+     .experience-text ul{
+         list-style: none;
+         margin-top: 1rem;
+     }
+
+     .experience-text ul li{
+        line-height: 2.5rem;
+     }
+
+    .progammingLanguages-icons{
+        margin-top: 3rem;
+        font-family: var(--bold-font);
+        
+    }
+    .progammingLanguages-icons span{
+        text-decoration: underline;
+    }
+
+    .progammingLanguages-icons ul{
+        margin-top: 1rem;
+    }
+
+    .progammingLanguages-icons ul li{
+        display: inline-block;
+        text-align: center;
+        padding: 0 .8rem;
+        color: var(--secondary-color);
+    }
+
+    .progammingLanguages-icons ul li img{
+        width: 2rem;
+        height: 2rem;
+        
+    }
+
+    .graphicDesign-icons{
+        margin-top: 3rem;
+        font-family: var(--bold-font);
+        
+    }
+    .graphicDesign-icons span{
+        text-decoration: underline;
+    }
+
+    .graphicDesign-icons ul{
+        margin-top: 1rem;
+    }
+
+    .graphicDesign-icons ul li{
+        display: inline-block;
+        text-align: center;
+        padding: 0 .8rem;
+        color: var(--secondary-color);
+    }
+
+    .graphicDesign-icons ul li img{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .text-pc{
+        font-family: var(--light-font);
+        color: var(--text-color);
+        line-height: 1.5rem;
+        margin-top: 3rem;
+        padding-left: 5rem;
+        padding-bottom: 5rem;
+        padding-right: 5rem;
+    }   
+
+    /* ---------- banner section  ---------- */
+
+    .banner-container{
+        background-image: url(./assets/123.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        display: inline-block;
+        width: 100%;
+
+        font-size: 1.3rem;
+        font-family: var(--tittle-font);
+        color: var(--secondary-color);
+        padding: 4rem;
+        text-align: center;
+        
+    }
+
+    .banner h3{
+        margin-bottom: 2rem;
+    }
+
+    .banner a{
+        font-family: var(--bold-font);
+        font-size: 1rem;
+        text-decoration: none;
+        color: var(--text-color);
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid var(--secondary-color);
+        border-radius: 1rem;
+        padding: 1rem 2.3rem;
+        margin-top: 1rem;
+    }
+
+    /* ---------- my works section  ---------- */
+
+     .mywork-tittle{
+        text-align: center;
+        font-family: var(--tittle-font);
+        color: var(--text-color);
+        background-color: black;
+        font-size: 3rem;
+        padding: 5rem 0rem;
+    }
+    
+    .works-container{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: black;
+        padding-bottom: 4rem;
+    }
+
+    .works{
+        width: 75%;
+        margin: 2rem;
+        overflow: hidden;
+        background: var(--primary-color);
+        cursor: default;
+        transition: all 400ms ease;
+        border: 3px solid var(--secondary-color);
+        border-radius: 3rem;
+    }
+
+    .works:hover{
+        transform: translateY(-3%);
+    }
+    
+    .works-div{
+        text-align: center;
+    }
+
+    .works img{
+        width: 30%;
+        padding: 4rem 0rem;
+    }
+
+    .works .content{
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .works .content p{
+        line-height: 1.6rem;
+        color: var(--text-color);
+        font-family: var(--light-font);
+    }
+
+    .works .content h3{
+        font-family: var(--bold-font);
+        margin-bottom: 1rem;
+        color: var(--text-color);
+    }
+
+    .works .content a{
+        font-family: var(--bold-font);
+        font-size: .8rem;
+        text-decoration: none;
+        display: inline-block;
+        padding: 1rem 1.8rem;
+        margin: 3rem;
+        cursor: pointer;
+        color: var(--secondary-color);
+        border: 1px solid var(--secondary-color);
+        border-radius: 3rem;
+    }
+
+    /* ---------- my works section  ---------- */
+
+
+    footer{
+        padding-top: 4rem;
+        text-align: center;
+        background-image: url(./assets/123.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: var(--tittle-font);
+        font-size: 1.5rem;
+        color: var(--text-color);
+    }
+    .social-media-footer{
+       padding-top: 3rem;
+       padding-bottom: .9rem;
+        display: flex;
+        margin: 0 ;
+        text-decoration: none;
+        justify-content: center;
+    }
+
+    .social-media-footer ul li{
+        text-align: center;
+        
+        display: inline-block;
+        padding: 0 .8rem;
+        color: var(--secondary-color);
+        
+    }
+
+    .number-container-footer{
+        font-size: .7rem;
+        padding-bottom: 1rem;
+    }
+
+  
+}
+
+
+/* ************ Pantallas grandes * ************/
+
+@media (min-width:860px){
+
+    .background{
+        height: 100vh;
+        background-image: url(./assets/123.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+    }
+    
+    .portfolio-tittle{
+        color: var(--secondary-color);
+        font-family: var(--tittle-font);
+        text-decoration: underline;
+        font-size: 3rem;
+        position: absolute;
+        top: 25%;
+
+    }
+
+    .year-cv_button{
+        font-family: var(--light-font);
+        color: var(--text-color);
+        font-size: .8rem;
+
+        position: absolute;
+        top: 37%;
+    }
+
+    .year{
+        margin-right: 32rem;
+        font-family: var(--bold-font);
+    }
+
+    .cv-button{
+
+        cursor: pointer;
+        border: 1px solid var(--secondary-color);
+        padding: 0.2rem 0.4rem;
+        border-radius: 1rem;
+        background-color: transparent;
+        text-decoration: none;
+        
+        font-family: var(--light-font);
+        font-size: .8rem;
+        color: var(--link-color);
+
+    }
+
+    .name-job{
+        display: flex;
+        color: var(--text-color);
+        font-size: .7rem;
+        font-family: var(--light-font);
+        position: absolute;
+        top: 85%;
+    }
+
+    .name-job span{
+        margin-right: 2rem;
+    }
+
+    .name-job h2{
+        font-size: .7rem;
+    }
+
+    .social-media{
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 ;
+        position: absolute;
+        top: 90%;
+    }
+
+    .social-media ul li{
+        text-align: center;
+        display: inline-block;
+        padding: 0 .8rem;
+        color: var(--secondary-color);
+    }
+
+    .number-container{
+        font-family:var(--tittle-font);
+        color: var(--text-color);
+        font-size: .7rem;
+        position: absolute;
+        top: 95%;
+    }
+
+    /* ---------- about me section  ---------- */
+
+    main{
+        display: flex;
+        background-color: var(--primary-color);
+    }
+
+    .about-me{
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        padding-top: 3rem;
+        width: 50%;
+    }
+
+    .aboutme-tittle{
+        font-size: 3rem;
+        font-family: var(--light-font);
+        margin-top: 1.5rem;
+        margin-left: 7rem;
+    }
+
+    .aboutme-subtittle{
+        font-size: 1.1rem;
+        font-family: var(--tittle-font);
+    
+        margin-left: 7rem;
+    }
+
+    .about-me_text{
+        margin-top: 1.5rem;
+        margin-left: 7rem;
+    }
+
+    .about-me_text p{
+        font-family: var(--light-font);
+        line-height: 1.6;
+    }
+
+    .skills{
+        justify-content: center;
+        font-family: var(--light-font);
+        margin-top: 1.5rem;
+        margin-left: 7rem;
+        margin-bottom: 12rem;
+    }
+
+    .skills-text{
+        display: flex;  
+    }
+
+    .languages-text ul{
+        list-style: none;
+        margin-top: 1rem;
+     }
+    .languages-text ul li{
+        line-height: 1.5rem;
+    }
+ 
+     .experience-text ul{
+         list-style: none;
+         margin-top: 1rem;
+     }
+
+     .experience-text ul li{
+        line-height: 1.5rem;
+     }
+
+    .progammingLanguages-icons{
+        margin-top: 1rem;
+        font-family: var(--bold-font);
+        
+    }
+    .progammingLanguages-icons span{
+        text-decoration: underline;
+    }
+
+    .progammingLanguages-icons ul{
+        margin-top: 1rem;
+    }
+
+    .progammingLanguages-icons ul li{
+        display: inline-block;
+        text-align: center;
+        padding: 0 .8rem;
+        color: var(--secondary-color);
+    }
+
+    .progammingLanguages-icons ul li img{
+        width: 2.5rem;
+        height: 2.5rem;
+        
+    }
+
+    .graphicDesign-icons{
+        margin-top: 1rem;
+        font-family: var(--bold-font);
+        
+    }
+    .graphicDesign-icons span{
+        text-decoration: underline;
+    }
+
+    .graphicDesign-icons ul{
+        margin-top: 1rem;
+    }
+
+    .graphicDesign-icons ul li{
+        display: inline-block;
+        text-align: center;
+        padding: 0 .8rem;
+        color: var(--secondary-color);
+    }
+
+    .graphicDesign-icons ul li img{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .text-pc{
+        font-family: var(--light-font);
+        color: var(--text-color);
+        line-height: 1.5rem;
+        width: 40%;
+        margin-top: 11.5rem;
+        padding-left: 5rem;
+    }
+
+
+
+
+    /* ---------- banner section  ---------- */
+
+    .banner-container{
+        background-image: url(./assets/123.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        width: 100%;
+
+        font-size: 2rem;
+        font-family: var(--tittle-font);
+        color: var(--secondary-color);
+        padding: 5rem;
+        text-align: center;
+        
+    }
+
+    .banner h3{
+        margin-bottom: 2rem;
+    }
+    .banner a{
+        font-family: var(--bold-font);
+        font-size: 1rem;
+        text-decoration: none;
+        color: var(--text-color);
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid var(--secondary-color);
+        border-radius: 1rem;
+        padding: 1rem 2.3rem;
+        margin-top: 1rem;
+    }
+
+    /* ---------- my works section  ---------- */
+
+     .mywork-tittle{
+        text-align: center;
+        font-family: var(--tittle-font);
+        color: var(--text-color);
+        background-color: black;
+        font-size: 5rem;
+        padding: 8rem 0rem;
+    }
+    
+    .works-container{
+        width: 100%;
+        display: flex;
+        background-color: black;
+        padding-bottom: 8rem;
+    }
+
+    .works{
+        width: 100%;
+        margin: 2rem;
+        overflow: hidden;
+        background: var(--primary-color);
+        cursor: default;
+        transition: all 400ms ease;
+        border: 3px solid var(--secondary-color);
+        border-radius: 3rem;
+    }
+
+    .works:hover{
+        transform: translateY(-3%);
+    }
+    
+    .works-div{
+        text-align: center;
+    }
+
+    .works img{
+        width: 30%;
+        padding: 4rem 0rem;
+    }
+
+    .works .content{
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .works .content p{
+        line-height: 1.6rem;
+        color: var(--text-color);
+        font-family: var(--light-font);
+    }
+
+    .works .content h3{
+        font-family: var(--bold-font);
+        margin-bottom: 1rem;
+        color: var(--text-color);
+    }
+
+    .works .content a{
+        font-family: var(--bold-font);
+        font-size: .8rem;
+        text-decoration: none;
+        display: inline-block;
+        padding: 1rem 1.8rem;
+        margin: 3rem;
+        cursor: pointer;
+        color: var(--secondary-color);
+        border: 1px solid var(--secondary-color);
+        border-radius: 3rem;
+    }
+
+    /* ---------- my works section  ---------- */
+
+
+    footer{
+        padding-top: 7rem;
+        text-align: center;
+        background-image: url(./assets/123.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: var(--tittle-font);
+        font-size: 2.5rem;
+        color: var(--text-color);
+    }
+    .social-media-footer{
+       padding-top: 5rem;
+       padding-bottom: .9rem;
+        display: flex;
+        margin: 0 ;
+        text-decoration: none;
+        justify-content: center;
+    }
+
+    .social-media-footer ul li{
+        text-align: center;
+        
+        display: inline-block;
+        padding: 0 .8rem;
+        color: var(--secondary-color);
+        
+    }
+
+    .number-container-footer{
+        font-size: .7rem;
+        padding-bottom: 1rem;
+    }
+}
+
+
+
+
+/* ESTILOS NORMALES (para móviles en vertical)
+   ========================================================================= /
+ 
+body { ... }
+p    { ... }
+ 
+/ RESPONSIVE
+   ========================================================================= /
+ 
+/ Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- /
+@media (min-width: 768px) { }
+ 
+/ Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- /
+@media (min-width: 1024px) { }
+ 
+/ Escritorios muy anchos
+   ------------------------------------------------------------------------- /
+   @media (min-width: 1200px) { }
