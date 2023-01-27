@@ -285,7 +285,7 @@
             margin-bottom: 2rem;
         }
         
-        .banner a{
+        .banner button{
             font-family: var(--bold-font);
             font-size: 1rem;
             text-decoration: none;
@@ -293,10 +293,160 @@
             cursor: pointer;
             background-color: transparent;
             border: 2px solid var(--secondary-color);
-            border-radius: 1rem;
+            border-radius: 3rem;
             padding: 1rem 1rem;
             margin-top: 1rem;
         }
+
+        .overlay{
+            background: rgba(0, 0, 0, .3);
+            position: fixed;
+            top: 0;
+            bottom:0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+        }
+    
+        .overlay .active{
+            visibility: visible;
+        }
+    
+        .form-popup{
+            background-color: rgb(245, 245, 245);
+            border-radius: .5rem;
+            font-family: var(--tittle-font);
+            color: var(--primary-color);
+            padding: 1.5rem;
+            text-align: center;
+            width: 80%;
+    
+            transition: .3s ease all;
+            transform: scale(0.7);
+            opacity: 0;
+        }
+    
+        .form-popup .btn-close-popup{
+            display: block;
+            width: 1rem;
+            margin-left: 95%;
+        }
+    
+        .form-popup h3{
+            font-size: 2rem;
+            margin-bottom: .5rem;
+            opacity: 0;
+        }
+    
+        .form-popup h4{
+            font-size: 1rem;
+            font-family: var(--light-font);
+            margin-bottom: 1rem;
+            opacity: 0;
+        }
+    
+        .form-popup form .container-inputs{
+            opacity: 0;
+        }
+        
+        .form-popup form .container-inputs input{
+            width: 100%;
+            margin-bottom: 1rem;
+            height: 3rem;
+            line-height: 1rem;
+            font-size: 1rem;
+            padding-left: 1rem;
+            font-family: var(--light-font);
+            border-radius: .5rem;
+            border: 2px solid #bbbbbb;
+        }
+    
+        .form-popup form .container-inputs textarea{
+            width: 100%;
+            margin-bottom: 1rem;
+            resize: none;
+            font-family: var(--light-font);
+            border-radius: .5rem;
+            border: 2px solid #bbbbbb;
+            padding-left: 1rem;
+            line-height: 1.5rem;
+            font-size: 1rem;
+            padding-top: 1rem;
+        }
+    
+    
+        .form-popup form .btn-submit{
+            padding: 0 2rem;
+            height: 3rem;
+            line-height: 2rem;
+            border: 2px solid black;
+            color: black;
+            border-radius: 1rem;
+            font-family: var(--bold-font);
+            cursor: pointer;
+            font-size: 1rem;
+            transition: .3s ease all;
+        }
+    
+        .form-popup form .btn-submit:hover{
+            background-color: black;
+            color: white;
+            
+        }
+    
+        /*animacion*/
+    
+        .form-popup.active{
+            opacity: 1;
+            transform: scale(1);
+        }
+    
+        .form-popup.active h3{
+            animation: tittle .8s ease .5s forwards;
+        }
+    
+        .form-popup.active h4{
+            animation: subtittle .8s ease .5s forwards;
+        }
+    
+        .form-popup.active .container-inputs{
+            animation: inputs 1s ease 1s forwards;
+        }
+    
+        @keyframes tittle {
+            from{
+                transform: translateY(-1rem);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes subtittle {
+            from{
+                transform: translateY(1rem);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    
+        @keyframes inputs {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+
     
         /* ---------- my works section  ---------- */
     
@@ -656,7 +806,7 @@
         margin-bottom: 2rem;
     }
 
-    .banner a{
+    .banner button{
         font-family: var(--bold-font);
         font-size: 1rem;
         text-decoration: none;
@@ -664,9 +814,158 @@
         cursor: pointer;
         background-color: transparent;
         border: 2px solid var(--secondary-color);
-        border-radius: 1rem;
+        border-radius: 3rem;
         padding: 1rem 2.3rem;
         margin-top: 1rem;
+    }
+
+    .overlay{
+        background: rgba(0, 0, 0, .3);
+        position: fixed;
+        top: 0;
+        bottom:0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+
+    .overlay .active{
+        visibility: visible;
+    }
+
+    .form-popup{
+        background-color: rgb(245, 245, 245);
+        border-radius: .5rem;
+        font-family: var(--tittle-font);
+        color: var(--primary-color);
+        padding: 1.5rem;
+        text-align: center;
+        width: 80%;
+
+        transition: .3s ease all;
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    .form-popup .btn-close-popup{
+        display: block;
+        width: 1rem;
+        margin-left: 95%;
+    }
+
+    .form-popup h3{
+        font-size: 2rem;
+        margin-bottom: .5rem;
+        opacity: 0;
+    }
+
+    .form-popup h4{
+        font-size: 1rem;
+        font-family: var(--light-font);
+        margin-bottom: 1rem;
+        opacity: 0;
+    }
+
+    .form-popup form .container-inputs{
+        opacity: 0;
+    }
+    
+    .form-popup form .container-inputs input{
+        width: 100%;
+        margin-bottom: 1rem;
+        height: 3rem;
+        line-height: 1rem;
+        font-size: 1rem;
+        padding-left: 1rem;
+        font-family: var(--light-font);
+        border-radius: .5rem;
+        border: 2px solid #bbbbbb;
+    }
+
+    .form-popup form .container-inputs textarea{
+        width: 100%;
+        margin-bottom: 1rem;
+        resize: none;
+        font-family: var(--light-font);
+        border-radius: .5rem;
+        border: 2px solid #bbbbbb;
+        padding-left: 1rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+        padding-top: 1rem;
+    }
+
+
+    .form-popup form .btn-submit{
+        padding: 0 2rem;
+        height: 3rem;
+        line-height: 2rem;
+        border: 2px solid black;
+        color: black;
+        border-radius: 1rem;
+        font-family: var(--bold-font);
+        cursor: pointer;
+        font-size: 1rem;
+        transition: .3s ease all;
+    }
+
+    .form-popup form .btn-submit:hover{
+        background-color: black;
+        color: white;
+        
+    }
+
+    /*animacion*/
+
+    .form-popup.active{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .form-popup.active h3{
+        animation: tittle .8s ease .5s forwards;
+    }
+
+    .form-popup.active h4{
+        animation: subtittle .8s ease .5s forwards;
+    }
+
+    .form-popup.active .container-inputs{
+        animation: inputs 1s ease 1s forwards;
+    }
+
+    @keyframes tittle {
+        from{
+            transform: translateY(-1rem);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes subtittle {
+        from{
+            transform: translateY(1rem);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes inputs {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
     }
 
     /* ---------- my works section  ---------- */
@@ -1028,7 +1327,7 @@
     .banner h3{
         margin-bottom: 2rem;
     }
-    .banner a{
+    .banner button{
         font-family: var(--bold-font);
         font-size: 1rem;
         text-decoration: none;
@@ -1036,9 +1335,158 @@
         cursor: pointer;
         background-color: transparent;
         border: 2px solid var(--secondary-color);
-        border-radius: 1rem;
+        border-radius: 3rem;
         padding: 1rem 2.3rem;
         margin-top: 1rem;
+    }
+
+    .overlay{
+        background: rgba(0, 0, 0, .3);
+        position: fixed;
+        top: 0;
+        bottom:0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+
+    .overlay .active{
+        visibility: visible;
+    }
+
+    .form-popup{
+        background-color: rgb(245, 245, 245);
+        border-radius: .5rem;
+        font-family: var(--tittle-font);
+        color: var(--primary-color);
+        padding: 1.5rem;
+        text-align: center;
+        width: 30%;
+
+        transition: .3s ease all;
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    .form-popup .btn-close-popup{
+        display: block;
+        width: 1rem;
+        margin-left: 95%;
+    }
+
+    .form-popup h3{
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        opacity: 0;
+    }
+
+    .form-popup h4{
+        font-size: 1rem;
+        font-family: var(--light-font);
+        margin-bottom: 1rem;
+        opacity: 0;
+    }
+
+    .form-popup form .container-inputs{
+        opacity: 0;
+    }
+    
+    .form-popup form .container-inputs input{
+        width: 100%;
+        margin-bottom: 1rem;
+        height: 3rem;
+        line-height: 1rem;
+        font-size: 1rem;
+        padding-left: 1rem;
+        font-family: var(--light-font);
+        border-radius: .5rem;
+        border: 2px solid #bbbbbb;
+    }
+
+    .form-popup form .container-inputs textarea{
+        width: 100%;
+        margin-bottom: 1rem;
+        resize: none;
+        font-family: var(--light-font);
+        border-radius: .5rem;
+        border: 2px solid #bbbbbb;
+        padding-left: 1rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+        padding-top: 1rem;
+    }
+
+
+    .form-popup form .btn-submit{
+        padding: 0 2rem;
+        height: 3rem;
+        line-height: 2rem;
+        border: 2px solid black;
+        color: black;
+        border-radius: 1rem;
+        font-family: var(--bold-font);
+        cursor: pointer;
+        font-size: 1rem;
+        transition: .3s ease all;
+    }
+
+    .form-popup form .btn-submit:hover{
+        background-color: black;
+        color: white;
+        
+    }
+
+    /*animacion*/
+
+    .form-popup.active{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .form-popup.active h3{
+        animation: tittle .8s ease .5s forwards;
+    }
+
+    .form-popup.active h4{
+        animation: subtittle .8s ease .5s forwards;
+    }
+
+    .form-popup.active .container-inputs{
+        animation: inputs 1s ease 1s forwards;
+    }
+
+    @keyframes tittle {
+        from{
+            transform: translateY(-1rem);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes subtittle {
+        from{
+            transform: translateY(1rem);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes inputs {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
     }
 
     /* ---------- my works section  ---------- */

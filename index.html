@@ -171,8 +171,28 @@
         
         <div class="banner">
             <h3>LET'S MAKE AMAZING THINGS TOGETHER!</h3>
-            <a href="web.html">Contact me</a>
+            <button class="btn-contact" id="btn-contact">Contact me</button>
         </div>
+
+        <div class="overlay" id="overlay">
+
+            <div class="form-popup" id="form-popup">
+                <a href="#form-popup" id="btn-close-popup" class="btn-close-popup"><img src="/assets/icons/x.svg" alt=""></a>
+                <h3>CONTACT ME</h3>
+                <h4>Send me a message!</h4>
+                <form action="">
+                    <div class="container-inputs">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Mail">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    </div>
+                    <input type="submit" class="btn-submit" value="Send message">
+                </form>
+                
+            </div>
+
+        </div>
+
     </div>
 
     <h3 class="mywork-tittle">My works.</h3>
@@ -267,7 +287,7 @@
 
     
 
-
+    <script src="script.js"></script>
     
 </body>
 </html>
